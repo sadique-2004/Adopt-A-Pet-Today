@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adopt me !</title>
+  <link rel="icon" href="LOGO.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: white;"><img src="LOGO.png" id="logo">Adopt a Pet Today</a>
+        <a href="https://pages.razorpay.com/stores/st_OzWWzhoTMJwfGL"><i class="fa-solid fa-cart-shopping"
+            id="shop-cart"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="main">
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" data-bs-interval="3000">
+          <div class="carousel-caption">
+
+            <h5>Find Your Perfect Companion Today !</h5>
+            <p>Looking to bring joy and love into your home? Adopt a pet today and make a difference in the life of a
+              furry friend in need. Whether you’re searching for a playful puppy or a cuddly cat, your new best friend
+              is waiting. Start your adoption journey now and give them the forever home they deserve!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-caption">
+            <h5>Adopt, Love, and Be Loved</h5>
+            <p>Bringing a pet into your home is more than just adopting an animal—it's welcoming a lifelong friend. Our
+              adoption program makes it easy to find a pet that fits your lifestyle and fills your heart with love.
+              Whether big or small, every pet deserves a home where they can thrive. Start your journey to unconditional
+              love and happiness by adopting a pet today!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="carousel-caption">
+            <h5>Change a Life, One Paw at a Time</h5>
+            <p>Adopting a pet is not just about finding a companion—it's about saving a life. Every pet you adopt opens
+              up space for another animal to be rescued. Take the step to provide a loving home, and experience the
+              unconditional love and loyalty that comes with it. Make an impact, adopt today!</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div id="pets" class="row">
+      <div class="card col-md-4 col-lg-3">
+        <img src="dog.jpg" alt="jerry" />
+        <h3 class="mt-2">Meet Jerry</h3>
+        <p class="paragraph">
+          Jerry is a charming and friendly dog with a heart of gold, and he is
+          looking for a loving home to call his own. He is a medium-sized mixed
+          breed with soft, fluffy fur and soulful brown eyes that will melt your
+          heart.
+          <span class="moreText" style="display: none; background-color: white;">
+            If you are looking for a loyal and loving companion who will
+            bring endless joy into your life, Jerry may be the perfect pet for
+            you. Adopting Jerry means giving him a second chance at a happy life,
+            and you will be rewarded with the unconditional love and companionship
+            that only a dog can provide. <span>So don't hesitate to bring this wonderful
+              pup home today !</span>
+          </span>
+        </p>
+        <button class="moreBtn" onclick="toggleText(this)"><i class="fa-solid fa-caret-down"></i> Read more</button>
+
+        <div class="buy">
+          <a href="#" class="btn btn disabled" tabindex="-1" role="button" aria-disabled="true">₹ 7999</a>
+          <a href="https://pages.razorpay.com/stores/st_OzWWzhoTMJwfGL" style="background-color:#EEEDE7"><button
+              type="button" class="btn btn-outline-success">Adopt
+              Now</button></a>
+        </div>
+
+      </div>
+
+      <div class="card col-md-4 col-lg-3">
+        <img src="cat.jpg" alt="tom" />
+        <h3 class="mt-2">Meet Tom</h3>
+        <p class="paragraph">
+          Tom is a handsome and affectionate cat who is looking for his forever
+          home. He is a medium-sized domestic shorthair with sleek black and
+          white fur and striking green eyes that will capture your heart.
+          <span class="moreText" style="display: none; background-color: white;">
+            If you
+            are looking for a loyal and loving companion who will provide you with
+            endless joy and entertainment, Tom may be the perfect pet for you.
+            Adopting Tom means giving him a second chance at a happy life, and you
+            will be rewarded with the unconditional love and companionship that
+            only a cat can provide mhn mmmm. <span>So why not bring this wonderful
+              feline into your life today <i class="fa-solid fa-question"></i></span>
+          </span>
+        </p>
+        <button class="moreBtn" onclick="toggleText(this)"><i class="fa-solid fa-caret-down"></i> Read more</button>
+        <div class="buy">
+          <!-- <p class="price">₹ 7999</p> -->
+          <a href="#" class="btn btn disabled" tabindex="-1" role="button" aria-disabled="true">₹ 6999</a>
+          <a href="https://pages.razorpay.com/stores/st_OzWWzhoTMJwfGL" style="background-color:#EEEDE7"><button
+              type="button" class="btn btn-outline-success">Adopt
+              Now</button></a>
+        </div>
+      </div>
+
+      <div class="card col-md-4 col-lg-3">
+        <img src="new.jpg" alt="tom" />
+        <h3 class="mt-2">Meet Leo</h3>
+        <p class="paragraph">
+          Leo is a playful and energetic kitten who is looking for a loving home. He is a small, mixed breed with soft,
+          fluffy fur and bright blue eyes that will melt your heart.If you are looking for a loyal and loving
+          <span class="moreText" style="display: none; background-color: white;">
+            companion who will bring endless joy and entertainment into your life, Leo may be the perfect pet for you.
+            Adopting
+            Leo
+            means giving him a second chance at a happy life, and you will be rewarded with the unconditional love and
+            companionship that only a kitten can provide. <span>So why not bring this wonderful feline into your life
+              today <i class="fa-solid fa-question"></i></span>
+          </span>
+        </p>
+        <button class="moreBtn" onclick="toggleText(this)"><i class="fa-solid fa-caret-down"></i> Read more</button>
+
+        <div class="buy">
+
+          <a href="#" class="btn btn disabled" tabindex="-1" role="button" aria-disabled="true">₹ 6999</a>
+          <a href="https://pages.razorpay.com/stores/st_OzWWzhoTMJwfGL" style="background-color:#EEEDE7"><button
+              type="button" class="btn btn-outline-success">Adopt
+              Now</button></a>
+        </div>
+      </div>
+
+      <div class="card col-md-4 col-lg-3">
+        <img src="kLnl5bo.webp" alt="tom" />
+        <h3 class="mt-2">Meet Molly</h3>
+        <p class="paragraph">
+          Molly is a sweet and gentle dog who is looking for a loving home. She is a medium-sized mixed breed with soft,
+          fluffy fur and soulful brown eyes that will melt your heart.If you are looking for a loyal and loving
+          <span class="moreText" style="display: none; background-color: white;">
+            companion who will bring endless joy into your life,Molly may be the perfect pet for you. Adopting Molly
+            means
+            giving her a second chance at a happy life, and you will be rewarded with the unconditional love and
+            companionship that only a dog can provide. <span>So why not bring this wonderful pup into your life today <i
+                class="fa-solid fa-question"></i></span>
+          </span>
+
+        </p>
+        <button class="moreBtn" onclick="toggleText(this)"><i class="fa-solid fa-caret-down"></i> Read more</button>
+
+        <div class="buy">
+
+          <a href="#" class="btn btn disabled" tabindex="-1" role="button" aria-disabled="true">₹ 5999</a>
+          <a href="https://pages.razorpay.com/stores/st_OzWWzhoTMJwfGL" style="background-color:#EEEDE7"><button
+              type="button" class="btn btn-outline-success">Adopt
+              Now</button></a>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Success Stories Section -->
+    <!-- <div class="testimonials">
+      <h2>Success Stories</h2>
+      <p>"Adopting Jerry has been the best decision for our family!" - John Doe</p>
+      <p>"Tom is the perfect companion. We love him!" - Jane Smith</p>
+    </div> -->
+
+    <div class="testimonials">
+      <h2>Success Stories</h2>
+
+      <div class="testimonial-item">
+        <img src="reviewImg.jpg" alt="John Doe" class="testimonial-img">
+        <p><strong>"Adopting Jerry has been the best decision for our family!"</strong> - Md Sadique</p>
+      </div>
+
+      <div class="testimonial-item">
+        <img src="reviewImg1.jpg" alt="Jane Smith" class="testimonial-img">
+        <p><strong>"Tom is the perfect companion. We love him!"</strong> - Md Sadique</p>
+      </div>
+      
+    </div>
+
+
+    <div class="catFacts">
+      <h1 class="display-6 lead text-muted">Purr-fectly Amazing Fact !</h1>
+      <button type="button" class="btn btn btn-secondary" id="catfbutton">Meow More !</button>
+      <p id="output">Cats have scent glands located on their faces, near their whiskers, and on their paws. They use
+        these glands to mark their territory and establish a sense of familiarity and comfort in their environment.</p>
+    </div>
+
+    <form class="row g-3 adoptNow form-group input-group" id="adoptNow" action="https://api.web3forms.com/submit"
+      method="POST">
+      <input type="hidden" name="access_key" value="90526a5d-6e72-4f56-8afb-d65b579efcba">
+      <!-- <div class="buynow"> -->
+      <h2>Your Feedback is Important for US</h2>
+      <div class="col-md-6">
+        <label for="name" class="form-label">Full_Name*</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="eg:-Md Sadique" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="mob-number" class="form-label">Phone</label>
+        <input type="number" class="form-control" id="mob-number" name="Phone-number" placeholder="Phone number">
+      </div>
+      <div class="col-md-6">
+        <label for="mob-number" class="form-label">E-mail*</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="eg:- ......@gmail.com" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State*</label>
+        <select id="inputState" name="state" class="form-select" required>
+          <option selected>Love from &#9829;.....</option>
+          <option>Andhra Pradesh</option>
+          <option value="">Arunachal Pradesh</option>
+          <option value="">Assam</option>
+          <option value="">Bihar</option>
+          <option value="">Chhattisgarh</option>
+          <option value="">Goa</option>
+          <option value="">Gujarat</option>
+          <option value="">Haryana</option>
+          <option value="">Himachal Pradesh</option>
+          <option value="">Jharkhand</option>
+          <option value="">Karnataka</option>
+          <option value="">Kerala</option>
+          <option value="">Madhya Pradesh</option>
+          <option value="">Maharashtra</option>
+          <option value="">Manipur</option>
+          <option value="">Meghalaya</option>
+          <option value="">Mizoram</option>
+          <option value="">Nagaland</option>
+          <option value="">Odisha</option>
+          <option value="">Punjab</option>
+          <option value="">Rajasthan</option>
+          <option value="">Sikkim</option>
+          <option value="">Tamil Nadu</option>
+          <option value="">Telangana</option>
+          <option value="">Tripura</option>
+          <option value="">Uttar Pradesh</option>
+          <option value="">Uttarakhand</option>
+          <option value="">West Bengal</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip" name="zip">
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City*</label>
+        <input type="text" class="form-control" id="inputCity" name="City" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputState4" class="form-label">Your Pet</label>
+        <select id="inputState4" name="pet" class="form-select">
+          <option selected>Meet Tom</option>
+          <option>Meet Jerry</option>
+          <option>Meet Leo</option>
+          <option>Meet Molly</option>
+        </select>
+      </div>
+
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Give your feedback" id="floatingTextarea2" name="message"
+          style="height: 150px"></textarea>
+        <label for="floatingTextarea2">Feedback</label>
+      </div>
+
+
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+
+    </form>
+    <h4>A gift of new life</h4>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p>Copy-right &copy; 2024 Adopt a Pet Today | All rights reserved | DevelopBy : Md Imran</p>
+    <p>Follow us on:</p>
+    <a href="https://www.facebook.com/mdsadique508/" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com/MdSadiq24296263" class="text-white me-2"><i class="fab fa-brands fa-x-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/mdsadique5" class="text-white me-2"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/mdsadique508" class="text-white"><i class="fab fa-instagram"></i></a>
+  </footer>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+<script src="app.js"></script>
+
+</html>
